@@ -27,23 +27,24 @@ void quick_sort(int A[], int n){
             swap(A+i, A+j);
             j++;
                 }
-        eq = j;
-        for(i = j = eq; i < n; i++){
-            if(A[i] < pivot){
-                swap(A+i, A+j);
-                j++;
-            }
+ 
         
         }
         
-    }
+    
+    eq = j;
+    for(i = j = eq; i < n; i++){
+        if(A[i] < pivot){
+            swap(A+i, A+j);
+            j++;
+        }}
     for(gk = eq; gk < j; gk++){
         swap(A+gk-eq,A+gk);
     }
     quick_sort(A,j-eq);
     quick_sort(A+j,n-j);
     
-}
+    }
 
 
 int main(){
